@@ -5,7 +5,7 @@
 #include <string>
 
 int function1(std::string email);
-int function2(int  function1(std::string email), std::string email);
+int function2(int function1(std::string email), std::string email);
 
 int main()
 {
@@ -33,9 +33,9 @@ int function1(std::string email)
     // первый символ ТОЧКА. 
     std::string check = ".-abcdefghijklmnopqrstuvwxyz!#$%&'*+-/=?^_`{|}~";
 
-    for (int i = 0; i < email.length(), i++;)
+    for (int i = 0; i < email.length(); i++)
     {
-        for (int j = 0; j < check.length(), j++;)
+        for (int j = 0; j < check.length(); j++)
         {
             if (email[0] == check[0]) return -1;  // если первая точка
             if (i > 64) return -1;  //если первая половина до @ больше 64
@@ -67,9 +67,9 @@ int function2(int  i, std::string email) // передаем значение i 
     int i = function1(email) +1;// создаем новый счетчик
     if (i <= 0) return -1;  // проверка на смысл проверять вторую часть
 
-    for (; i < email.length(), i++;)
+    for (; i < email.length(); i++)
     {
-        for (int j = 0; j < check.length(), j++;)
+        for (int j = 0; j < check.length(); j++)
         {
             if (email[0] == check[0]) return -1;  // если первая точка
             if ((email.length()-(i +1)) > 63) return -1;                //если вторая половина после @ больше 63                               
